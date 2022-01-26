@@ -186,6 +186,17 @@ export const WhyBlockProtocol1Section = () => {
     const triggers: ScrollTrigger[] = [];
 
     markers.forEach((marker) => {
+      gsap.from(marker, {
+        scrollTrigger: {
+          trigger: marker,
+          scrub: true,
+          start: "top center-=105",
+          end: "bottom center+=50",
+        },
+        autoAlpha: 0,
+        ease: "none",
+      });
+
       triggers.push(
         ScrollTrigger.create({
           trigger: marker,
@@ -265,7 +276,7 @@ export const WhyBlockProtocol1Section = () => {
               zIndex: 1,
               width: "100%",
               position: "sticky",
-              top: "45vh",
+              top: `calc(50vh - 105px)`,
             }}
           >
             {[
@@ -305,12 +316,14 @@ export const WhyBlockProtocol1Section = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "flex-start",
-                height: "60vh",
+                // height: "60vh",
+                height: "20vh",
+                marginBottom: "30vh",
               }}
             >
               <Box
                 sx={{
-                  backgroundColor: "#373B49",
+                  // backgroundColor: "#373B49",
                   zIndex: 2,
                   width: { md: "80%" },
                   display: "flex",
