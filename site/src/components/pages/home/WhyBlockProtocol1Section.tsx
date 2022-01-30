@@ -123,7 +123,7 @@ const CONTENT = [
     id: 2,
     content: (
       <Typography sx={{ color: ({ palette }) => palette.purple[200] }}>
-        which maps onto an{" "}
+        which maps onto an {" "}
         <Box
           sx={{
             color: ({ palette }) => palette.purple[400],
